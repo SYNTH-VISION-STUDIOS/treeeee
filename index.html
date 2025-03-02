@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree Clone</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #d3cabb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #f9f6f1;
+            width: 350px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-img {
+            width: 50%;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+        .links a, .my_bi_links a {
+            display: block;
+            text-decoration: none;
+            color: #3e3e3e;
+            padding: 10px;
+            background: white;
+            margin: 8px 0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .links a:hover, .my_bi_links a:hover {
+            background: #ddd;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #3e3e3e;
+            margin: 0 10px;
+        }
+
+        /* Styling untuk link yang muncul saat klik MY_BI */
+        .my_bi_links {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 420px) {
+            .container {
+                width: 90%;
+            }
+        }
+        @media (min-width: 600px) {
+            .container {
+                width: 400px;
+            }
+        }
+        @media (min-width: 768px) {
+            .container {
+                width: 450px;
+            }
+        }
+        @media (min-width: 992px) {
+            .container {
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MY_BI</h1>
+        <img src="https://marketplace.canva.com/EAFgn7KRn6s/1/0/1600w/canva-cokelat-estetis-facebook-foto-profil--277-QYXnjI.jpg" alt="Profile Image" class="profile-img">
+        <div class="links">
+            <a href="#">Rate Card</a>
+            <a href="#">Produk Rekomendasi By Shopee</a>
+            <a href="#" id="my_bi" role="button">MY_BI</a>
+            <div class="my_bi_links">
+                <a href="https://tokopedia.com" target="_blank">Toko Website</a>
+                <a href="https://shopee.co.id" target="_blank">Toko Shopee</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("my_bi").addEventListener("click", function() {
+            let links = document.querySelector(".my_bi_links");
+            links.style.display = (links.style.display === "block") ? "none" : "block";
+        });
+    </script>
+</body>
+</html>
